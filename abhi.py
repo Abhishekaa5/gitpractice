@@ -22,9 +22,10 @@ def app2():
     stdout=str(stdout.decode())
     return f"app2_hit from ----------->>> {stdout}"
 
-print(os.getppid())
-print(os.getpid())
+if __name__ == "__main__":
+    print(os.getppid())
+    print(os.getpid())
 
-app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0')
 
 
