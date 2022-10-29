@@ -8,7 +8,9 @@ pipeline {
             }
         }
         stage('pythonrun'){
+            steps{
             sh ("python3 abhi.py")
+            }
         }
     }
 }
