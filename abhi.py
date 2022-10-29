@@ -1,5 +1,6 @@
 from flask import Flask
 from subprocess import Popen,PIPE
+import multiprocessing
 
 app = Flask(__name__)
 
@@ -24,4 +25,5 @@ def app2():
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
 
+parent = multiprocessing.parent_process()
 app.run(debug=True)
