@@ -25,16 +25,6 @@ def app2():
 print(os.getppid())
 print(os.getpid())
 
-process = Popen(['ps -ef | grep -i python'], stdout=PIPE, stderr=PIPE)
-stdout, stderr = process.communicate()
-stdout=str(stdout.decode())
-print(stdout)
-
-process = Popen(['ps -ef | grep -i jenkin'], stdout=PIPE, stderr=PIPE)
-stdout, stderr = process.communicate()
-stdout=str(stdout.decode())
-print(stdout)
-
 app.run(host='0.0.0.0')
 
 
