@@ -1,5 +1,6 @@
 from flask import Flask
 from subprocess import Popen,PIPE
+import os
 
 app = Flask(__name__)
 
@@ -22,6 +23,9 @@ def app2():
     return f"app2_hit from ----------->>> {stdout}"
 
 if __name__ == "__main__":
+    print(os.getppid())
+    print(os.getpid())
+
     app.run(host='0.0.0.0')
 
-app.run(debug=True)
+
